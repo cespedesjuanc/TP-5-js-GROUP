@@ -348,6 +348,7 @@ section {
   /*top: 94px;*/
   top: 114px;
 }
+
 .container-recomendaciones {
   display: flex;
   flex-direction: column;
@@ -383,6 +384,52 @@ section {
   background: #25252563;
   box-shadow: 0px 0px 50px 0px #01020780;
 }
+
+.info-card p {
+  height: 20px;
+  width: 100%;
+  left: 1120px;
+  top: 1244px;
+  border-radius: nullpx;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+  margin-left: 22px;
+  margin-top: 11px;
+}
+
+.info-reco span {
+  height: 17px;
+  width: 100%;
+  left: 1120px;
+  top: 1268px;
+  border-radius: nullpx;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #ffffff3b;
+  margin-top: 4px;
+  margin-left: 22px;
+}
+
+.img-reco {
+left: 13.96%;
+right: 81.94%;
+top: 31.97%;
+bottom: 64.74%;
+
+background: url(pexels-ana-madeleine-uribe-2762939.jpg);
+mix-blend-mode: normal;
+border-radius: 16px;
+}
+
 .hero-categorias {
   margin-top: 180px;
   margin-bottom: 150px;
@@ -616,6 +663,7 @@ section {
   margin-bottom: 18px;
 }
 .container-precio__btn span {
+  /*
   height: 25px;
   width: 100%;
   left: 1120.4453125px;
@@ -627,8 +675,31 @@ section {
   line-height: 25px;
   letter-spacing: 0em;
   text-align: left;
-  color: linear-gradient(98.81deg, #ff7a00 -0-0.82%, #fb103d 101101.53%);
+  /*color: linear-gradient(98.81deg, #ff7a00 -0-0.82%, #fb103d 101101.53%);*/
   margin-left: 22.45px;
+  */
+/* Priece */
+
+
+position: absolute;
+height: 25px;
+left: 31.51%;
+right: 64.98%;
+top: calc(50% - 25px/2 + 358px);
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 19px;
+line-height: 131.02%;
+/* identical to box height, or 25px */
+
+  /* linear-primary */
+background: linear-gradient(98.81deg, #FFA100 -0.82%, #FF005C 101.53%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
 }
 .btn-popu {
   height: 29px;
