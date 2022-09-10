@@ -5,7 +5,7 @@ const productsData = [
         precio: 350,
         subName:'Solo para expertos',
         category:'pizza',
-        cardImg:'./img/populares/Photo Menu-4.png',
+        cardImg:'./assets/img/populares/Photo_Menu_1.png',
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const productsData = [
         precio: 350,
         subName:'c/jamón crudo',
         category:'pizza',
-        cardImg:'img/populares/Photo Menu-1.png',
+        cardImg:'./assets/img/populares/Photo_Menu_2.png',
     },
        {
         id: 3,
@@ -21,7 +21,7 @@ const productsData = [
         precio: 380,
         subName:'BASTA',
         category:'pizza',
-        cardImg: 'img/populares/Photo Menu-2.png',
+        cardImg: './assets/img/populares/Photo_Menu_3.png',
        },
     
        {
@@ -29,7 +29,7 @@ const productsData = [
         name:'La Maradona',
         precio: 450,
         subName: 'Eterna',
-        cardImg:'img/populares/Photo Menu-5.png',
+        cardImg:'./assets/img/populares/Photo_Menu_4.png',
        },
     
        {
@@ -37,7 +37,7 @@ const productsData = [
         name: 'Picantovich',
         precio: 750,
         subName:'Pica 2 Veces',
-        cardImg:'img/populares/Photo Menu-6.png',
+        cardImg:'./assets/img/populares/Photo_Menu_5.png',
        },
     
        {
@@ -45,7 +45,7 @@ const productsData = [
         name:'La Hasbulla',
         precio: 990,
         subName:'En honor al 1!',
-        cardImg:'img/populares/Photo Menu-8.png',
+        cardImg:'./assets/img/populares/Photo_Menu_6.png',
     
        },
     
@@ -54,7 +54,7 @@ const productsData = [
         name:'Leo Messi',
         precio: 10,
         subName:'De pié señores!',
-        cardImg:'img/populares/Photo Menu-7.png',
+        cardImg:'./assets/img/populares/Photo_Menu_7.png',
     
        },
     
@@ -63,7 +63,7 @@ const productsData = [
         name: 'Nick Gi',
         precio: 'Gratis',
         subName:'La que desaparece',
-        cardImg:'img/populares/Photo Menu-3.png',
+        cardImg:'./assets/img/populares/Photo_Menu_8.png',
     
        },
     
@@ -72,7 +72,7 @@ const productsData = [
         name:'Bennazianna',
         precio: 3650,
         subName:'La mas completa',
-        cardImg:'img/recomendados/Photo Menu.png',
+        cardImg:'./assets/img/recomendados/Photo_Menu_1.png',
        },
     
        {
@@ -80,7 +80,7 @@ const productsData = [
         name:'Tronco Pizza',
         precio: 870,
         subName:'Para todo el dia',
-        cardImg:'img/recomendados/Photo Menu-1.png',
+        cardImg:'./assets/img/recomendados/Photo_Menu_2.png',
        },
     
        {
@@ -88,7 +88,7 @@ const productsData = [
         name:'Papas/Provensal',
         precio: 360,
         subName:'Van como piña',
-        cardImg:'img/recomendados/Photo Menu-2.png',
+        cardImg:'./assets/img/recomendados/Photo_Menu_3.png',
        },
     ];
     
