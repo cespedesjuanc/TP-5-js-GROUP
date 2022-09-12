@@ -274,9 +274,11 @@ main {
 }
 
 .container-sectioImg {
-  width: 50%;
-  height: 300px;
   margin: 0 20px 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-section {
@@ -334,6 +336,7 @@ main {
 }
 
 .pizzaDoble {
+  margin-top: 150px;
 }
 
 .container-recomendaciones {
