@@ -735,3 +735,67 @@ footer {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+/* MEDIA QUERY */
+
+@media only screen and (max-width: 600px) {
+  header {
+    width: 90%;
+  }
+
+  main {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .container-cardRecomendaciones {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .hero-categorias {
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+
+  .container-principal {
+    gap: 0px;
+  }
+
+  .container-sectioImg {
+    display: none;
+  }
+
+  .container-categorias {
+    flex-direction: column;
+  }
+
+  .container-links {
+    flex-direction: column;
+  }
+
+  .container-section h2 {
+    font-size: 30px;
+  }
+
+  .container-section h3 {
+    font-size: 15px;
+  }
+
+  .container-section p {
+    font-size: 10px;
+  }
+
+  .navbar {
+    gap: 0px;
+  }
+
+  .logo {
+    left: 15px;
+  }
+
+  .info-card {
+    margin: 0px;
+  }
+}
