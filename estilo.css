@@ -347,7 +347,7 @@ main {
 .container-recomendaciones h2 {
   height: 23px;
   width: 278px;
-  left: 120px;
+  /*left: 120px;*/
   top: 536px;
   border-radius: nullpx;
   font-family: Montserrat;
@@ -357,10 +357,12 @@ main {
   letter-spacing: 0em;
   text-align: left;
   color: #ffffff;
+  margin-bottom: 30px;
 }
 .container-cardRecomendaciones {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 .info-card {
   margin: 0 30px;
@@ -371,12 +373,15 @@ main {
   border-radius: 15px;
   background: #25252563;
   box-shadow: 0px 0px 50px 0px #01020780;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .info-card p {
   height: 20px;
   width: 100%;
-  left: 1120px;
+  /*left: 1120px;*/
   top: 1244px;
   border-radius: nullpx;
   font-family: Montserrat;
@@ -384,7 +389,7 @@ main {
   font-weight: 500;
   line-height: 20px;
   letter-spacing: 0em;
-  text-align: left;
+  /*text-align: left;*/
   color: #ffffff;
   margin-left: 22px;
   margin-top: 11px;
@@ -416,6 +421,7 @@ main {
   background: url(pexels-ana-madeleine-uribe-2762939.jpg);
   mix-blend-mode: normal;
   border-radius: 16px;
+  margin-left: 20px;
 }
 
 .hero-categorias {
@@ -425,7 +431,7 @@ main {
 .hero-categorias h2 {
   height: 20px;
   width: 87px;
-  left: 120px;
+  /*left: 120px;*/
   top: 770px;
   border-radius: nullpx;
   font-family: Montserrat;
@@ -435,14 +441,15 @@ main {
   letter-spacing: 0em;
   text-align: left;
   color: #ffffff;
-  position: absolute;
+  /*position: absolute;*/
+  margin-bottom: 20px;
 }
 .container-categorias {
   width: 90%;
   height: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  /*flex-wrap: wrap;*/
   align-items: center;
   gap: 40px 40px;
   margin-right: 50px;
@@ -503,18 +510,18 @@ main {
 }
 
 .hero-masPopulares {
-  margin-top: 180px;
-  margin-bottom: 150px;
+  /*margin-top: 180px;*/
+  /*margin-bottom: 150px;*/
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 90%;
   height: 100%;
 }
 .hero-masPopulares h2 {
   height: 23px;
   width: 278px;
-  left: 120px;
-  top: 1066px;
+  /*left: 120px;*/
+  /*top: 1066px;*/
   border-radius: nullpx;
   font-family: Montserrat;
   font-size: 22px;
@@ -523,8 +530,9 @@ main {
   letter-spacing: 0em;
   text-align: left;
   color: #ffffff;
-  position: absolute;
-  margin: 150px 0;
+  /*position: absolute;*/
+  /*margin: 50px 0;*/
+  margin-bottom: 20px;
 }
 .contenedor-card {
   display: flex;
@@ -622,6 +630,21 @@ main {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   /*text-fill-color: transparent;*/
+}
+
+.colorPrecio {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 25px;
+  /* identical to box height, or 25px */
+
+  /* linear-primary */
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #ff005c 101.53%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .btn-popu {
