@@ -112,7 +112,7 @@ function splitProducts(size) {
   return chunk;
 }
 const allProducts = {
-  productList: splitProducts(3),
+  productList: splitProducts(4),
   next: 1,
-  limit: splitProducts(3).length,
+  limit: splitProducts(4).length,
 };
