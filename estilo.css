@@ -736,6 +736,22 @@ footer {
   margin-bottom: 20px;
 }
 
+.contenedor-btnLoad {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+  align-items: center;
+}
+.btn-load {
+  height: 29px;
+  width: 85px;
+  left: 442px;
+  top: 620px;
+  border-radius: 17.5px;
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #ff005c 101.53%);
+  margin-right: 45px;
+}
+
 /* MEDIA QUERY */
 
 @media only screen and (max-width: 600px) {
