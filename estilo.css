@@ -752,6 +752,137 @@ footer {
   margin-right: 45px;
 }
 
+/* se agrega desde aca */
+.cart-container {
+  display: flex;
+  flex-direction: row;
+  height: 103px;
+  width: 347px;
+  left: 1130px;
+  top: 164px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 50px 0px #01020780;
+  background: #252525;
+}
+
+.cart-icon {
+  cursor: pointer;
+}
+
+.container-img-cart {
+  width: 30%;
+}
+.container-img-cart img {
+  height: 62px;
+  width: 62px;
+  left: 1144px;
+  top: 185px;
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+}
+.contianer-infoCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 40%;
+}
+.contianer-infoCard h2 {
+  height: 20px;
+  width: 101px;
+  left: 1223.4462890625px;
+  top: 183px;
+  border-radius: nullpx;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+.contianer-infoCard p {
+  height: 17px;
+  width: 128px;
+  left: 1223.4462890625px;
+  top: 207px;
+  border-radius: nullpx;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #ffffff22;
+}
+.contianer-infoCard span {
+  height: 25px;
+  width: 66px;
+  left: 1223.8916015625px;
+  top: 229px;
+  border-radius: nullpx;
+  font-family: Montserrat;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  background: linear-gradient(98.81deg, #ffa100 -0.82%, #fb103d 101.53%);
+}
+.container-contador {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.down {
+  height: 1.4285705089569092px;
+  width: 9.999979019165039px;
+  left: 8.125px;
+  top: 12.45831298828125px;
+  border-radius: 0px;
+  background: linear-gradient(
+    98.81deg,
+    #ffa100 -0.82%,
+    #ffa100 -0.81%,
+    #ff005c 101.53%
+  );
+}
+.up {
+  height: 26px;
+  width: 26px;
+  left: 66px;
+  top: 0px;
+  border-radius: 8px;
+  background: linear-gradient(
+    98.81deg,
+    #ffa100 -0.82%,
+    #ffa100 -0.81%,
+    #ff005c 101.53%
+  );
+}
+.item-quantity {
+  height: 24px;
+  width: 6px;
+  left: 42px;
+  top: 2px;
+  border-radius: nullpx;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5714285969734192px;
+  text-align: left;
+  color: #ffffff;
+}
+.empty-msg {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/*  HASTA ACA Juan */
+
 /* MEDIA QUERY */
 
 @media only screen and (max-width: 600px) {
