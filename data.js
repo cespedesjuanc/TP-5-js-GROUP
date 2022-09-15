@@ -5,7 +5,7 @@ const productsData = [
     precio: 350,
     subName: "Solo para expertos",
     category: "pizzas",
-    cardImg: "./assets/img/populares/Photo_Menu_1.png",
+    cardImg: "/assets/img/populares/Photo_Menu_1.png",
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const productsData = [
     precio: 350,
     subName: "c/jamón crudo",
     category: "pizzas",
-    cardImg: "./assets/img/populares/Photo_Menu_2.png",
+    cardImg: "/assets/img/populares/Photo_Menu_2.png",
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const productsData = [
     precio: 380,
     subName: "BASTA",
     category: "Mexican Food",
-    cardImg: "./assets/img/populares/Photo_Menu_3.png",
+    cardImg: "/assets/img/populares/Photo_Menu_3.png",
   },
 
   {
@@ -30,7 +30,7 @@ const productsData = [
     precio: 450,
     subName: "Eterna",
     category: "Mexican Food",
-    cardImg: "./assets/img/populares/Photo_Menu_4.png",
+    cardImg: "/assets/img/populares/Photo_Menu_4.png",
   },
 
   {
@@ -39,7 +39,7 @@ const productsData = [
     precio: 750,
     subName: "Pica 2 Veces",
     category: "pizzas",
-    cardImg: "./assets/img/populares/Photo_Menu_5.png",
+    cardImg: "/assets/img/populares/Photo_Menu_5.png",
   },
 
   {
@@ -48,7 +48,7 @@ const productsData = [
     precio: 990,
     subName: "En honor al 1!",
     category: "pizzas",
-    cardImg: "./assets/img/populares/Photo_Menu_6.png",
+    cardImg: "/assets/img/populares/Photo_Menu_6.png",
   },
 
   {
@@ -57,7 +57,7 @@ const productsData = [
     precio: 10,
     subName: "De pié señores!",
     category: "pizzas",
-    cardImg: "./assets/img/populares/Photo_Menu_7.png",
+    cardImg: "/assets/img/populares/Photo_Menu_7.png",
   },
 
   {
@@ -66,7 +66,7 @@ const productsData = [
     precio: "Gratis",
     subName: "La que desaparece",
     category: "Wraps",
-    cardImg: "./assets/img/populares/Photo_Menu_8.png",
+    cardImg: "/assets/img/populares/Photo_Menu_8.png",
   },
 
   {
@@ -75,7 +75,7 @@ const productsData = [
     precio: 3650,
     subName: "La mas completa",
     category: "Mexican Food",
-    cardImg: "./assets/img/populares/Photo_Menu_9.jpg",
+    cardImg: "/assets/img/populares/Photo_Menu_9.jpg",
   },
 
   {
@@ -84,19 +84,19 @@ const productsData = [
     precio: 870,
     subName: "Para todo el dia",
     category: "pizzas",
-    cardImg: "./assets/img/populares/Photo_Menu_10.jpeg",
+    cardImg: "/assets/img/populares/Photo_Menu_10.jpeg",
   },
 
   {
     id: 11,
-    name: "Papas | Provenzal",
+    name: "Papas/Provensal",
     precio: 360,
     subName: "Van como piña",
     category: "Napapuki",
-    cardImg: "./assets/img/populares/Photo_Menu_11.jpeg",
+    cardImg: "/assets/img/populares/Photo_Menu_11.jpeg",
   },
   {
-    id: 11,
+    id: 12,
     name: "Pizza Imperio",
     precio: 560,
     subName: "La de Carlitos",
@@ -112,7 +112,7 @@ function splitProducts(size) {
   return chunk;
 }
 const allProducts = {
-  productList: splitProducts(4),
+  productList: splitProducts(3),
   next: 1,
-  limit: splitProducts(4).length,
+  limit: splitProducts(3).length,
 };
