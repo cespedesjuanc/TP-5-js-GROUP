@@ -6,3 +6,5 @@ Participantes:
 Juan Sebastian Viedma
 
 Juan Carlos Cespedes
+
+Carlos Javier Soria Pilone
