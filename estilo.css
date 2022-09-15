@@ -197,6 +197,7 @@ header {
 }
 
 .cart-item {
+  /*
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -205,6 +206,20 @@ header {
   padding: 20px;
   border: 1px solid var(--electric);
   border-radius: 10px;
+  */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+  height: 103px;
+  width: 347px;
+  left: 1130px;
+  top: 164px;
+  border-radius: 15px;
+  background: #252525;
+  box-shadow: 0px 0px 50px 0px #01020780;
+  margin-left: 46px;
 }
 
 .cart-item img {
