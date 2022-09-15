@@ -1,15 +1,18 @@
 /*contenedor del carrito*/
-const products = document.querySelector(".contenedor-card");
-/*contenedor de recomendaciones*/
-const listRecomendacion = document.getElementById("list-recomendaciones");
+const products = document.querySelector(".products-container");
+//contenedor de productos del carrito
+const productsCart = document.querySelector(".cart-container");
 /* span con el total en el carrito*/
 const total = document.querySelector(".total");
+/*contenedor de recomendaciones*/
+const listRecomendacion = document.getElementById("list-recomendaciones");
+const btnComprar = document.getElementById("btn-add");
 //el contenedor de las categorias
 const categories = document.querySelector(".container-categorias");
 //un htmlcollection de botones de todas las categorias
 const categoriesList = document.querySelectorAll(".category");
 /*boton comprar carrito*/
-const btnComprarCarrito = document.querySelector(".btn-buy");
+const buyBtn = document.querySelector(".btn-buy");
 /*boton para abrir y cerrar el menu*/
 const barsBtn = document.querySelector(".menu-label");
 /*carrito*/
@@ -20,34 +23,34 @@ const barsMenu = document.querySelector(".navbar-list");
 const overlay = document.querySelector(".overlay");
 const btnLoad = document.querySelector(".btn-load");
 
+const cartBtn = document.querySelector(".cart-label");
+
 //seteamos el carrito vacio o lo que haya en localStorage segun corresponda
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 //funcion para guardar el carrito en el localStorage
-const savelocalStorage = (cartlist) => {
+const saveLocalStorage = (cartlist) => {
   localStorage.setItem("cart", JSON.stringify(cartlist));
 };
 
 const renderProduct = (product) => {
   const { id, name, precio, subName, cardImg } = product;
   return `
-  <div class="card-containerpopu">
-    <img src="${cardImg}"  class="img-populares" alt="${name}">
-    <div class="container-info">
-    <p>${name}</p>
-    <span>${subName}</span>
-  </div>
-  <div class="container-precio__btn" >
-  <span>${precio}</span>
-  <button class="btn-popu" id="btn-agregar" 
-  data-id='${id}'
-  data-name='${name}'
-  data-name='${subName}'
-  data-precio='${precio}'
-  data-img='${cardImg}'
-  >Agregar</button>
-</div>
-</div>
+    <div class="card-containerpopu">
+        <img src="${cardImg}" alt="${name}">
+        <div class="container-info">
+            <p>${name}</p>
+            <span>${subName}</span>
+        </div>
+        <div class="container-precio__btn" >
+            <span>$ ${precio}</span>
+            <button class="btn-add"data-id='${id}'
+            data-name='${name}'
+            data-name='${subName}'
+            data-precio='${precio}'
+            data-img='${cardImg}'>Agregar</button>
+        </div>
+    </div>
     `;
 };
 
@@ -97,68 +100,54 @@ const showMore = () => {
     btnLoad.classList.add("hidden");
   }
 };
-/* se agrego js desde aca - Juan */
 
 /// --------- Logica para el carro ---------------------- //
 // Renderizado del producto del carrito
 const renderCartProduct = (cartProduct) => {
-  const { id, name, precio, cardImg, quantity } = cartProduct;
+  const { id, name, precio, subName, cardImg, quantity } = cartProduct;
   return `
-    <div class="cart-container">
-     <div class="container-img-cart>
-     <img src="${cardImg}" alt="${name}">
+  <div class="cart-item">
+    <img src="${cardImg}" alt="${name}"/>
+    <div class="item-info">
+        <h3 class="item-title">${name}</h3>
+        <p class="item-bid">${subName}</p>
+        <span class="item-price">Precio: $ ${precio}</span>
     </div>
-    <div class="container-infoCard">
-    <h2>${name}</h2>
-    <p>${subName}</p>
-    <span>${precio}</span>
-    </div> 
-    <div class="container-contador">
-    <span class="down" data-id=${id}>-</span>
-    <p class="item-quantity">${quantity}</p>
-    <span class="up" data-id=${id}></span>
+    <div class="item-handler">
+      <span class="quantity-handler down" data-id=${id}>-</span>
+      <span class="item-quantity">${quantity}</span>
+      <span class="quantity-handler up" data-id=${id}>+</span>
     </div>
-   <div class="container-cart-subtotal">
-    <p>Sub total</p>
-    <span class="divider"></span>
   </div>
-  <div class="cart-envio">
-   <p>ENVIAR</p>
-   <span>Gratis</span>
-  </div>
-  <br>
-    <div class="cart-total">
-      <p>Total:</p>
-      <span class="total"></span>
-    </div>
-    <button class="btn-buy">Comprar</button>
-    </div>
-    `;
+
+
+
+  `;
 };
 
 // Logica para renderizar el carro
 const renderCart = (cartList) => {
   if (!cartList.length) {
-    products.innerHTML = `<p class="empty-msg">No hay productos en el carrito</p>`;
+    productsCart.innerHTML = `<p class="empty-msg">No hay productos en el carrito</p>`;
     return;
   }
-  products.innerHTML = cartList.map(renderCartProduct).join("");
+  productsCart.innerHTML = cartList.map(renderCartProduct).join("");
 };
 
 // Funcion para renderizar el total de la suma del precio de todo lo que esta en el carrito. Limitamos los decimales a 2
 // Por cada iteracion multiplicar el precio por la cantidad del producto que hay en el carrito y lo suma al acumulado
 const showTotal = (cartList) => {
-  total.innerHTML = `${cartList
+  total.innerHTML = ` ${cartList
     .reduce((acc, cur) => acc + Number(cur.precio) * cur.quantity, 0)
-    .toFixed(2)} ETH`;
+    .toFixed(2)}  Pesos`;
 };
 
 // Si no hay nada en el carro, deshabilita el boton de compra, si no lo habilita
 const disableBuyBtn = () => {
   if (!cart.length) {
-    btnComprarCarrito.classList.add("disabled");
+    buyBtn.classList.add("disabled");
   } else {
-    btnComprarCarrito.classList.remove("disabled");
+    buyBtn.classList.remove("disabled");
   }
 };
 
@@ -235,7 +224,7 @@ const addProduct = (e) => {
   disableBuyBtn();
 };
 
-// Si el carrito esta vacio, apretar el boton de compra no va  a hacer nada, sino triggerea a una nueva ventana de confirmacion en caso de confirmar, sacamos del localstorage el item cart y recargamos la pagina
+//Si el carrito esta vacio, apretar el boton de compra no va  a hacer nada, sino triggerea a una nueva ventana de confirmacion en caso de confirmar, sacamos del localstorage el item cart y recargamos la pagina
 const completeBuy = () => {
   if (!cart.length) return;
   if (window.confirm("¿Desea finalizar su compra?")) {
@@ -285,10 +274,11 @@ const init = () => {
   products.addEventListener("click", addProduct);
   productsCart.addEventListener("click", handleQuantity);
   btnLoad.addEventListener("click", showMore);
-  btnComprarCarrito.addEventListener("click", completeBuy);
+  buyBtn.addEventListener("click", completeBuy);
   cartBtn.addEventListener("click", toggleCart);
   barsBtn.addEventListener("click", toggleMenu);
   disableBuyBtn();
   window.addEventListener("scroll", closeOnScroll);
 };
+
 init();
